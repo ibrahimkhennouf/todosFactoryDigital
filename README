@@ -1,0 +1,15 @@
+# FACTORY DIGITALE TEST
+
+## TODOs API
+
+this project is a todo app solution for the FACTORY DIGITALE TEST coded using react 18 + typescript and bundled with vite.
+
+## Installation
+
+the app required a nodejs version of v16.13.1
+
+```sh
+cd todosFactoryDigital
+yarn
+yarn dev
+```
