@@ -8,8 +8,15 @@ export default function AddNewElement(props: any) {
   const fromRef = useRef(null);
   const hndlSubmit = (e: any) => {
     e.preventDefault();
-    const arrDate = e.currentTarget.date.value.split("-");
-    const date = `${arrDate[2]}/${arrDate[1]}/${arrDate[0]}`;
+
+    let date;
+    if (e.currentTarget.date.value) {
+      const arrDate = e.currentTarget.date.value?.split("-");
+      date = `${arrDate[2]}/${arrDate[1]}/${arrDate[0]}`;
+    } else {
+      date = "";
+    }
+
     const data = {
       title: e.currentTarget.title.value,
       completed: false,
@@ -45,7 +52,6 @@ export default function AddNewElement(props: any) {
         <textarea
           name="desc"
           className="outline-none w-4/12 rounded-md p-4 flex-1"
-          required
           cols={10}
           rows={2}
           placeholder="Description"
@@ -54,7 +60,6 @@ export default function AddNewElement(props: any) {
       <input
         type="date"
         className="outline-none rounded-md p-4"
-        required
         min={new Date().toISOString().split("T")[0]}
         name="date"
       />
