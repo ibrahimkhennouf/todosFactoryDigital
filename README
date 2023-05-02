@@ -6,7 +6,7 @@ this project is a todo app solution for the FACTORY DIGITALE TEST coded using re
 
 ## Installation
 
-the app required a nodejs version of v16.13.1
+the app requires a nodejs version of v16.13.1
 
 ```sh
 cd todosFactoryDigital
